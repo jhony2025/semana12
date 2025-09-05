@@ -1,65 +1,107 @@
-Gestión de Archivos
+Gestión de Inventario de Biblioteca
 Descripción
 
-Este proyecto proporciona un sistema de gestión de archivos en Python, que permite crear, leer, actualizar y eliminar archivos de manera sencilla. Está diseñado para automatizar tareas básicas de manejo de archivos y organizar la información de manera eficiente.
+Este proyecto implementa un sistema de gestión de inventario de biblioteca en Python, que permite registrar, actualizar y consultar libros disponibles, así como controlar préstamos y devoluciones. Es ideal para pequeñas bibliotecas o proyectos educativos que necesitan mantener un inventario organizado de manera sencilla.
 
 Funciones principales:
 
-Crear nuevos archivos.
+Registrar nuevos libros con información básica (título, autor, año, cantidad disponible).
 
-Leer contenido de archivos existentes.
+Consultar la lista de libros disponibles.
 
-Actualizar o modificar archivos.
+Actualizar la información de un libro.
 
-Eliminar archivos de manera segura.
+Controlar préstamos y devoluciones.
 
-Registro de operaciones realizadas (opcional).
+Eliminar libros del inventario de manera segura.
 
 Tecnologías utilizadas
 
 Python 3.x
 
-Librerías estándar (os, shutil)
-Clonar el repositorio
-git clone https://github.com/tu-usuario/gestion-archivos.git
-Acceder al directorio del proyecto
-cd gestion-archivos
-Instalar dependencias (si aplica):
+Librerías estándar (os, json)
+
+Instalación
+
+Clonar el repositorio:
+
+git clone https://github.com/tu-usuario/gestion-inventario-biblioteca.git
+
+
+Acceder al directorio del proyecto:
+
+cd gestion-inventario-biblioteca
+
+
+Instalar dependencias (opcional):
+
 pip install -r requirements.txt
 
-Uso
 
-Importar la clase o módulo principal en tu script:
+Nota: El proyecto utiliza principalmente librerías estándar de Python, por lo que puede ejecutarse sin instalaciones adicionales.
 
-from gestion_archivos import ArchivoManager
+ Uso
 
-Crear una instancia del gestor de archivos:
+Importar el módulo principal:
 
-manager = ArchivoManager()
+from biblioteca import Inventario
+
+
+Crear una instancia del inventario:
+
+inventario = Inventario()
 
 
 Operaciones disponibles:
 
-Crear archivo
+Agregar libro
+inventario.agregar_libro("El Principito", "Antoine de Saint-Exupéry", 1943, 5)
 
-manager.crear_archivo('ejemplo.txt', 'Contenido inicial del archivo.')
+Consultar libros
+inventario.mostrar_libros()
 
-Leer archivo
+Actualizar libro
+inventario.actualizar_libro("El Principito", cantidad=10)
 
-contenido = manager.leer_archivo('ejemplo.txt')
-print(contenido)
+Registrar préstamo
+inventario.prestar_libro("El Principito")
 
-Actualizar archivo
+Registrar devolución
+inventario.devolver_libro("El Principito")
 
-manager.actualizar_archivo('ejemplo.txt', 'Nuevo contenido agregado.')
+Eliminar libro
+inventario.eliminar_libro("El Principito")
 
-Eliminar archivo
+Ejemplo completo
+from biblioteca import Inventario
 
-manager.eliminar_archivo('ejemplo.txt')
+inventario = Inventario()
 
-Contribuciones
+# Agregar libros
+inventario.agregar_libro("El Principito", "Antoine de Saint-Exupéry", 1943, 5)
+inventario.agregar_libro("1984", "George Orwell", 1949, 3)
 
-Las contribuciones son bienvenidas. Por favor abre un pull request o un issue para sugerir mejoras o reportar errores.
+# Mostrar libros disponibles
+inventario.mostrar_libros()
+
+# Registrar un préstamo
+inventario.prestar_libro("1984")
+
+# Actualizar cantidad de un libro
+inventario.actualizar_libro("El Principito", cantidad=10)
+
+# Registrar devolución
+inventario.devolver_libro("1984")
+
+# Eliminar un libro
+inventario.eliminar_libro("El Principito")
+
+# Mostrar estado final
+inventario.mostrar_libros()
+
+ Contribuciones
+
+Las contribuciones son bienvenidas. Puedes abrir un pull request o issue para sugerir mejoras o reportar errores.
 
 Licencia
 
