@@ -1,5 +1,5 @@
-Gestión de Inventario de Biblioteca
-Descripción
+GESTIÓN DE INVENTARIO DE BIBLIOTECA
+DESCRIPCIÓN
 
 Este proyecto implementa un sistema de gestión de inventario de biblioteca en Python, que permite registrar, actualizar y consultar libros disponibles, así como controlar préstamos y devoluciones. Es ideal para pequeñas bibliotecas o proyectos educativos que necesitan mantener un inventario organizado de manera sencilla.
 
@@ -15,13 +15,13 @@ Controlar préstamos y devoluciones.
 
 Eliminar libros del inventario de manera segura.
 
-Tecnologías utilizadas
+TECNOLOGÍAS UTILIZADAS
 
 Python 3.x
 
 Librerías estándar (os, json)
 
-Instalación
+INSTALACIÓN
 
 Clonar el repositorio:
 
@@ -33,14 +33,14 @@ Acceder al directorio del proyecto:
 cd gestion-inventario-biblioteca
 
 
-Instalar dependencias (opcional):
+Instalar dependencias (si aplica):
 
 pip install -r requirements.txt
 
 
-Nota: El proyecto utiliza principalmente librerías estándar de Python, por lo que puede ejecutarse sin instalaciones adicionales.
+Nota: Este proyecto utiliza principalmente librerías estándar de Python, por lo que puede ejecutarse sin instalaciones adicionales.
 
- Uso
+USO
 
 Importar el módulo principal:
 
@@ -51,9 +51,7 @@ Crear una instancia del inventario:
 
 inventario = Inventario()
 
-
-Operaciones disponibles:
-
+Operaciones disponibles
 Agregar libro
 inventario.agregar_libro("El Principito", "Antoine de Saint-Exupéry", 1943, 5)
 
@@ -72,7 +70,7 @@ inventario.devolver_libro("El Principito")
 Eliminar libro
 inventario.eliminar_libro("El Principito")
 
-Ejemplo completo
+EJEMPLO COMPLETO
 from biblioteca import Inventario
 
 inventario = Inventario()
@@ -99,11 +97,15 @@ inventario.eliminar_libro("El Principito")
 # Mostrar estado final
 inventario.mostrar_libros()
 
- Contribuciones
+CONTRIBUCIONES
 
 Las contribuciones son bienvenidas. Puedes abrir un pull request o issue para sugerir mejoras o reportar errores.
 
-Licencia
+LICENCIA
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE
  para más detalles.
+
+Si quieres, puedo hacer una versión aún más profesional con tabla de contenidos automática para que sea más fácil navegar en GitHub, muy útil si el README queda largo.
+
+¿Quieres que haga esa versión también?
