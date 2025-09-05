@@ -1,9 +1,8 @@
-GESTIÓN DE INVENTARIO DE BIBLIOTECA
-DESCRIPCIÓN
+# GESTIÓN DE INVENTARIO DE BIBLIOTECA DESCRIPCIÓN
 
 Este proyecto implementa un sistema de gestión de inventario de biblioteca en Python, que permite registrar, actualizar y consultar libros disponibles, así como controlar préstamos y devoluciones. Es ideal para pequeñas bibliotecas o proyectos educativos que necesitan mantener un inventario organizado de manera sencilla.
 
-Funciones principales:
+# Funciones principales:
 
 Registrar nuevos libros con información básica (título, autor, año, cantidad disponible).
 
@@ -15,13 +14,13 @@ Controlar préstamos y devoluciones.
 
 Eliminar libros del inventario de manera segura.
 
-TECNOLOGÍAS UTILIZADAS
+#TECNOLOGÍAS UTILIZADAS
 
 Python 3.x
 
 Librerías estándar (os, json)
 
-INSTALACIÓN
+# INSTALACIÓN
 
 Clonar el repositorio:
 
@@ -40,7 +39,7 @@ pip install -r requirements.txt
 
 Nota: Este proyecto utiliza principalmente librerías estándar de Python, por lo que puede ejecutarse sin instalaciones adicionales.
 
-USO
+# USO
 
 Importar el módulo principal:
 
@@ -51,23 +50,23 @@ Crear una instancia del inventario:
 
 inventario = Inventario()
 
-Operaciones disponibles
-Agregar libro
+# Operaciones disponibles
+# Agregar libro
 inventario.agregar_libro("El Principito", "Antoine de Saint-Exupéry", 1943, 5)
 
-Consultar libros
+# Consultar libros
 inventario.mostrar_libros()
 
-Actualizar libro
+# Actualizar libro
 inventario.actualizar_libro("El Principito", cantidad=10)
 
-Registrar préstamo
+# Registrar préstamo
 inventario.prestar_libro("El Principito")
 
-Registrar devolución
+# Registrar devolución
 inventario.devolver_libro("El Principito")
 
-Eliminar libro
+# Eliminar libro
 inventario.eliminar_libro("El Principito")
 
 EJEMPLO COMPLETO
